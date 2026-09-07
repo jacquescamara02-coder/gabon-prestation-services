@@ -569,32 +569,32 @@
     height: clamp(11.5rem, 39vw, 16rem);
   }
   .catalog-fan-card:nth-child(1) {
-    --catalog-x: -6.2rem;
+    --catalog-x: -5rem;
   }
   .catalog-fan-card:nth-child(2) {
-    --catalog-x: -3.5rem;
+    --catalog-x: -2.8rem;
   }
   .catalog-fan-card:nth-child(4) {
-    --catalog-x: 3.5rem;
+    --catalog-x: 2.8rem;
   }
   .catalog-fan-card:nth-child(5) {
-    --catalog-x: 6.2rem;
+    --catalog-x: 5rem;
   }
   .catalog-fan:hover .catalog-fan-card:nth-child(1),
   .catalog-fan:focus-within .catalog-fan-card:nth-child(1) {
-    --catalog-x: -7rem;
+    --catalog-x: -5.6rem;
   }
   .catalog-fan:hover .catalog-fan-card:nth-child(2),
   .catalog-fan:focus-within .catalog-fan-card:nth-child(2) {
-    --catalog-x: -3.9rem;
+    --catalog-x: -3.2rem;
   }
   .catalog-fan:hover .catalog-fan-card:nth-child(4),
   .catalog-fan:focus-within .catalog-fan-card:nth-child(4) {
-    --catalog-x: 3.9rem;
+    --catalog-x: 3.2rem;
   }
   .catalog-fan:hover .catalog-fan-card:nth-child(5),
   .catalog-fan:focus-within .catalog-fan-card:nth-child(5) {
-    --catalog-x: 7rem;
+    --catalog-x: 5.6rem;
   }
 }
 

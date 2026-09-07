@@ -15,6 +15,8 @@ import { BackButton } from "@/components/BackButton";
 import { LetterSwing } from "@/components/LetterSwing";
 import enginsImage from "@/assets/engins.jpg";
 import soudureImage from "@/assets/soudure.jpg";
+import nettoyage1Asset from "@/assets/nettoyage-1.jpg.asset.json";
+import nettoyage2Asset from "@/assets/nettoyage-2.jpg.asset.json";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -172,6 +174,63 @@ function ServicesPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* NETTOYAGE & ENTRETIEN */}
+      <section className="mx-auto max-w-7xl px-6 py-20" aria-labelledby="nettoyage-title">
+        <div className="grid items-start gap-12 lg:grid-cols-[1.1fr_1fr]">
+          <Reveal>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+              07 — Nettoyage &amp; entretien
+            </p>
+            <LetterSwing id="nettoyage-title" className="mt-3 text-3xl">
+              Propreté et bon entretien de vos installations
+            </LetterSwing>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              Prestations destinées à assurer la propreté et le bon entretien des locaux,
+              bases, installations et zones de travail.
+            </p>
+
+            <h3 className="mt-8 text-xl">Principales prestations</h3>
+            <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
+              {[
+                "Nettoyage des bureaux",
+                "Nettoyage des locaux",
+                "Entretien des espaces communs",
+                "Nettoyage extérieur",
+                "Ramassage et regroupement de ferrailles et chutes métalliques",
+                "Évacuation des déchets et matériaux issus des travaux",
+                "Remise en état des zones de travail",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm leading-relaxed text-foreground">
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div className="grid gap-4">
+              <img
+                src={nettoyage1Asset.url}
+                alt="Ramassage et regroupement de ferrailles et chutes métalliques sur une zone de travail"
+                loading="lazy"
+                width={856}
+                height={372}
+                className="w-full rounded-lg border border-border object-cover shadow-card"
+              />
+              <img
+                src={nettoyage2Asset.url}
+                alt="Benne de ferrailles et chutes métalliques prête pour l'évacuation des déchets"
+                loading="lazy"
+                width={772}
+                height={372}
+                className="w-full rounded-lg border border-border object-cover shadow-card"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 

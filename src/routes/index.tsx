@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
 const priorities = [
   {
     icon: Wrench,
-    title: "Main-d'œuvre technique",
+    title: "Mise à disposition de main-d'œuvre technique",
     subtitle: "Soudeurs & tuyauteurs",
     text: "Une sous-traitance réactive avec des profils hautement qualifiés maîtrisant la soudure industrielle, prêts à intervenir sur vos chantiers.",
     image: soudureImage,
@@ -133,10 +133,10 @@ function HomePage() {
                 Demander un devis express
               </Link>
               <a
-                href={SITE.phoneLinks[0]}
+                href={SITE.phoneLinks[1]}
                 className="orbit-border-button orbit-hero inline-flex items-center justify-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold uppercase tracking-wide"
               >
-                Appeler {SITE.phones[0]}
+                Appeler {SITE.phones[1]}
               </a>
             </div>
           </Reveal>

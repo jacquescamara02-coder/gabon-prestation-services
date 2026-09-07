@@ -32,6 +32,16 @@ import peintureTerrasse3Asset from "@/assets/psg-peinture-terrasse-3.jpg.asset.j
 import menuiserieReelAsset from "@/assets/psg-menuiserie-reel.jpg.asset.json";
 import espacesVertsReelAsset from "@/assets/psg-espaces-verts-reel.jpg.asset.json";
 import finitionsReelAsset from "@/assets/psg-finitions-reel.jpg.asset.json";
+import climatisationPercageAsset from "@/assets/psg-climatisation-percage.jpg.asset.json";
+import climatisationExterieureAsset from "@/assets/psg-climatisation-exterieure.jpg.asset.json";
+import climatisationInterieureAsset from "@/assets/psg-climatisation-interieure.jpg.asset.json";
+import parcMercedesPlateauAsset from "@/assets/psg-parc-mercedes-plateau.jpg.asset.json";
+import parcManSinotrukAsset from "@/assets/psg-parc-man-sinotruk.jpg.asset.json";
+import parcMercedesRemorqueAsset from "@/assets/psg-parc-mercedes-remorque.jpg.asset.json";
+import parcMercedesDuoAsset from "@/assets/psg-parc-mercedes-duo.jpg.asset.json";
+import parcMercedesBenneRougeAsset from "@/assets/psg-parc-mercedes-benne-rouge.jpg.asset.json";
+import parcPorteEnginTelescopiqueAsset from "@/assets/psg-parc-porte-engin-telescopique.jpg.asset.json";
+import parcChargementTelescopiqueAsset from "@/assets/psg-parc-chargement-telescopique.jpg.asset.json";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -108,12 +118,22 @@ const travaux = [
   },
   {
     icon: Snowflake,
-    title: "Froid & plomberie",
-    text: "Installation, dépannage de climatiseurs et maintenance de réseaux de plomberie pour professionnels.",
-    image: null,
-    alt: "",
-    width: 0,
-    height: 0,
+    title: "Froid & climatisation",
+    text: "Installation, dépannage et maintenance de systèmes de froid et de climatisation pour professionnels.",
+    image: climatisationPercageAsset.url,
+    alt: "Techniciens PSG préparant le passage d'une installation de climatisation",
+    width: 1080,
+    height: 659,
+    gallery: [
+      {
+        src: climatisationExterieureAsset.url,
+        alt: "Technicien PSG intervenant sur l'unité extérieure d'un climatiseur",
+      },
+      {
+        src: climatisationInterieureAsset.url,
+        alt: "Technicien installant une unité intérieure de climatisation",
+      },
+    ],
   },
   {
     icon: UserCheck,
@@ -264,6 +284,55 @@ function ServicesPage() {
                 caption: "Intervention site industriel",
                 width: 816,
                 height: 542,
+              },
+              {
+                src: parcMercedesPlateauAsset.url,
+                alt: "Deux camions Mercedes et une remorque plateau du parc PSG",
+                caption: "Camions Mercedes & plateau",
+                width: 1280,
+                height: 992,
+              },
+              {
+                src: parcManSinotrukAsset.url,
+                alt: "Camions MAN jaune et Sinotruk orange du parc matériel PSG",
+                caption: "Camions MAN & Sinotruk",
+                width: 1280,
+                height: 992,
+              },
+              {
+                src: parcMercedesRemorqueAsset.url,
+                alt: "Camion Mercedes blanc stationné auprès d'une remorque plateau",
+                caption: "Camion Mercedes & remorque",
+                width: 762,
+                height: 1014,
+              },
+              {
+                src: parcMercedesDuoAsset.url,
+                alt: "Deux camions Mercedes et remorque porte-engins du parc PSG",
+                caption: "Flotte poids lourds PSG",
+                width: 1280,
+                height: 992,
+              },
+              {
+                src: parcMercedesBenneRougeAsset.url,
+                alt: "Camion benne Mercedes rouge du parc PSG",
+                caption: "Camion benne Mercedes 3343",
+                width: 762,
+                height: 1014,
+              },
+              {
+                src: parcPorteEnginTelescopiqueAsset.url,
+                alt: "Chariot télescopique vert transporté sur un porte-engins PSG",
+                caption: "Transport de chariot télescopique",
+                width: 762,
+                height: 1014,
+              },
+              {
+                src: parcChargementTelescopiqueAsset.url,
+                alt: "Chargement d'un chariot télescopique sur un porte-engins PSG",
+                caption: "Logistique d'engins lourds",
+                width: 762,
+                height: 1014,
               },
             ].map((item, i) => (
               <Reveal key={item.caption} delay={i * 60}>

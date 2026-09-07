@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, HardHat, ShieldCheck, Sparkles, Users, Wrench } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
+import { BackButton } from "@/components/BackButton";
+import { LetterSwing } from "@/components/LetterSwing";
 import equipeImage from "@/assets/equipe.jpg";
 
 export const Route = createFileRoute("/main-doeuvre")({
@@ -53,12 +55,13 @@ function WorkforcePage() {
       <section className="surface-navy">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:py-20 lg:grid-cols-2">
           <Reveal>
+            <BackButton inverse />
             <p className="text-xs font-semibold uppercase tracking-widest text-signal">
               Mise à disposition de personnel
             </p>
-            <h1 className="mt-3 font-display text-4xl sm:text-5xl">
+            <LetterSwing as="h1" className="mt-3 font-display text-4xl sm:text-5xl">
               Une main-d'œuvre qualifiée, prête à intervenir
-            </h1>
+            </LetterSwing>
             <p className="mt-5 max-w-xl leading-relaxed text-navy-foreground/85">
               P.S.G met à votre disposition des profils opérationnels dès leur arrivée sur
               site, encadrés et équipés selon les exigences de vos donneurs d'ordre.
@@ -113,7 +116,7 @@ function WorkforcePage() {
       <section className="bg-secondary/60 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <h2 className="text-3xl">Les profils disponibles</h2>
+            <LetterSwing className="text-3xl">Les profils disponibles</LetterSwing>
             <div className="hairline mt-5 h-px w-40" aria-hidden="true" />
           </Reveal>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -144,7 +147,7 @@ function WorkforcePage() {
         <Reveal>
           <div className="flex flex-col items-start justify-between gap-6 rounded-lg border border-border bg-card p-10 shadow-card md:flex-row md:items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl">Besoin d'une équipe la semaine prochaine ?</h2>
+              <LetterSwing className="text-2xl sm:text-3xl">Besoin d'une équipe la semaine prochaine ?</LetterSwing>
               <p className="mt-2 text-sm text-muted-foreground">
                 Indiquez-nous les profils, la durée et le lieu d'intervention.
               </p>

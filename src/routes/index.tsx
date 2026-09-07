@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
+import { LetterSwing } from "@/components/LetterSwing";
+import { Testimonials } from "@/components/Testimonials";
 import { SITE } from "@/lib/site";
 import heroImage from "@/assets/hero-psg.jpg";
 import enginsImage from "@/assets/engins.jpg";
@@ -106,9 +108,9 @@ function HomePage() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-6 max-w-4xl font-display text-4xl leading-[1.05] text-navy-foreground sm:text-6xl lg:text-7xl">
+            <LetterSwing as="h1" className="mt-6 max-w-4xl font-display text-4xl leading-[1.05] text-navy-foreground sm:text-6xl lg:text-7xl">
               P.S.G — Prestation de Services Généraux à Port-Gentil
-            </h1>
+            </LetterSwing>
           </Reveal>
 
           <Reveal delay={160}>
@@ -162,9 +164,9 @@ function HomePage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">
             Nos 3 services prioritaires à POG
           </p>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl sm:text-4xl">
+          <LetterSwing className="mt-3 max-w-3xl font-display text-3xl sm:text-4xl">
             Des solutions complètes, immédiatement opérationnelles
-          </h2>
+          </LetterSwing>
           <div className="hairline mt-6 h-px w-40" aria-hidden="true" />
         </Reveal>
 
@@ -212,9 +214,9 @@ function HomePage() {
             <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-signal">
               <ShieldCheck className="size-4" aria-hidden="true" /> Sécurité HSE
             </p>
-            <h2 className="mt-4 font-display text-3xl sm:text-4xl">
+            <LetterSwing className="mt-4 font-display text-3xl sm:text-4xl">
               Un personnel équipé, formé et sensibilisé
-            </h2>
+            </LetterSwing>
             <p className="mt-4 max-w-2xl leading-relaxed text-navy-foreground/85">
               Tous nos personnels (chauffeurs, conducteurs d'engins, soudeurs, plombiers,
               maçons) sont fournis avec leurs Équipements de Protection Individuelle (EPI)
@@ -243,12 +245,14 @@ function HomePage() {
         </div>
       </section>
 
+      <Testimonials />
+
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <Reveal>
           <div className="flex flex-col items-start justify-between gap-6 rounded-lg border border-border bg-card p-10 shadow-card md:flex-row md:items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl">Un besoin urgent sur votre chantier ?</h2>
+              <LetterSwing className="text-2xl sm:text-3xl">Un besoin urgent sur votre chantier ?</LetterSwing>
               <p className="mt-2 text-sm text-muted-foreground">
                 Engins, équipes techniques ou dépannage climatisation — nous répondons vite.
               </p>

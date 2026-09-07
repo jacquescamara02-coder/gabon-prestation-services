@@ -11,6 +11,8 @@ import {
   Wrench,
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+import { BackButton } from "@/components/BackButton";
+import { LetterSwing } from "@/components/LetterSwing";
 import enginsImage from "@/assets/engins.jpg";
 import soudureImage from "@/assets/soudure.jpg";
 
@@ -74,13 +76,14 @@ function ServicesPage() {
     <>
       <section className="surface-navy">
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+          <BackButton inverse />
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-widest text-signal">
               Nos prestations
             </p>
-            <h1 className="mt-3 max-w-3xl font-display text-4xl sm:text-5xl">
+            <LetterSwing as="h1" className="mt-3 max-w-3xl font-display text-4xl sm:text-5xl">
               Transport, logistique d'engins & travaux industriels
-            </h1>
+            </LetterSwing>
             <p className="mt-5 max-w-2xl leading-relaxed text-navy-foreground/85">
               Une offre intégrée pour vos chantiers urbains, maritimes et industriels à
               Port-Gentil : le matériel, les opérateurs et les corps de métier.
@@ -106,7 +109,7 @@ function ServicesPage() {
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">
               Bloc 1 — Transport & logistique
             </p>
-            <h2 className="mt-3 text-3xl">Location d'engins lourds et légers</h2>
+            <LetterSwing className="mt-3 text-3xl">Location d'engins lourds et légers</LetterSwing>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               Matériel de levage et de manutention adapté aux exigences de vos chantiers
               urbains, maritimes et industriels à POG.
@@ -137,7 +140,7 @@ function ServicesPage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-primary">
                 Bloc 2 — Travaux industriels & maintenance
               </p>
-              <h2 className="mt-3 text-3xl">Tous les corps de métier, un seul prestataire</h2>
+              <LetterSwing className="mt-3 text-3xl">Tous les corps de métier, un seul prestataire</LetterSwing>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 De la chaudronnerie à l'entretien des abords, P.S.G intervient sur l'ensemble
                 de vos besoins de maintenance industrielle et de second œuvre.
@@ -175,7 +178,7 @@ function ServicesPage() {
         <Reveal>
           <div className="flex flex-col items-start justify-between gap-6 rounded-lg border border-border bg-card p-10 shadow-card md:flex-row md:items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl">Décrivez-nous votre chantier</h2>
+              <LetterSwing className="text-2xl sm:text-3xl">Décrivez-nous votre chantier</LetterSwing>
               <p className="mt-2 text-sm text-muted-foreground">
                 Nous établissons un devis adapté à la durée et à la nature de l'intervention.
               </p>

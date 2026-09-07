@@ -13,6 +13,7 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 import { LetterSwing } from "@/components/LetterSwing";
+import { ServiceCatalog } from "@/components/ServiceCatalog";
 import { Testimonials } from "@/components/Testimonials";
 import { SITE } from "@/lib/site";
 import heroImage from "@/assets/hero-psg.jpg";
@@ -206,6 +207,8 @@ function HomePage() {
           ))}
         </div>
       </section>
+
+      <ServiceCatalog />
 
       {/* HSE */}
       <section className="surface-navy">

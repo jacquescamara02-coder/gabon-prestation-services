@@ -398,6 +398,160 @@
   width: min(23rem, calc(100vw - 3rem));
 }
 
+.catalog-stage {
+  min-height: 32rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 75rem;
+}
+
+.catalog-fan {
+  position: relative;
+  width: min(58rem, 100%);
+  height: 29rem;
+}
+
+.catalog-fan-card {
+  --catalog-x: 0rem;
+  --catalog-y: 0rem;
+  --catalog-r: 0deg;
+  --catalog-z: 1;
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  z-index: var(--catalog-z);
+  display: block;
+  width: clamp(10.75rem, 18vw, 14rem);
+  height: 25rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in oklch, var(--color-navy-foreground) 18%, transparent);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-navy);
+  box-shadow: var(--shadow-card);
+  transform: translate3d(calc(-50% + var(--catalog-x)), var(--catalog-y), 0)
+    rotate(var(--catalog-r));
+  transform-origin: 50% 100%;
+  transition:
+    transform 320ms var(--ease-out-soft),
+    box-shadow 320ms var(--ease-out-soft),
+    border-color 320ms var(--ease-out-soft),
+    filter 320ms var(--ease-out-soft);
+  will-change: transform;
+}
+
+.catalog-fan-card:nth-child(1) {
+  --catalog-x: -18rem;
+  --catalog-r: -13deg;
+  --catalog-z: 1;
+}
+
+.catalog-fan-card:nth-child(2) {
+  --catalog-x: -9rem;
+  --catalog-r: -7deg;
+  --catalog-z: 2;
+}
+
+.catalog-fan-card:nth-child(3) {
+  --catalog-x: 0rem;
+  --catalog-r: 0deg;
+  --catalog-z: 5;
+}
+
+.catalog-fan-card:nth-child(4) {
+  --catalog-x: 9rem;
+  --catalog-r: 7deg;
+  --catalog-z: 3;
+}
+
+.catalog-fan-card:nth-child(5) {
+  --catalog-x: 18rem;
+  --catalog-r: 13deg;
+  --catalog-z: 2;
+}
+
+.catalog-fan:hover .catalog-fan-card:nth-child(1),
+.catalog-fan:focus-within .catalog-fan-card:nth-child(1) {
+  --catalog-x: -22rem;
+  --catalog-r: -18deg;
+}
+
+.catalog-fan:hover .catalog-fan-card:nth-child(2),
+.catalog-fan:focus-within .catalog-fan-card:nth-child(2) {
+  --catalog-x: -11rem;
+  --catalog-r: -10deg;
+}
+
+.catalog-fan:hover .catalog-fan-card:nth-child(4),
+.catalog-fan:focus-within .catalog-fan-card:nth-child(4) {
+  --catalog-x: 11rem;
+  --catalog-r: 10deg;
+}
+
+.catalog-fan:hover .catalog-fan-card:nth-child(5),
+.catalog-fan:focus-within .catalog-fan-card:nth-child(5) {
+  --catalog-x: 22rem;
+  --catalog-r: 18deg;
+}
+
+.catalog-fan-card:hover,
+.catalog-fan-card:focus-visible {
+  --catalog-y: -1.1rem;
+  z-index: 20;
+  border-color: var(--color-signal);
+  box-shadow: var(--shadow-lift);
+  filter: saturate(1.06) contrast(1.02);
+}
+
+.catalog-fan-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 520ms var(--ease-out-soft);
+}
+
+.catalog-fan-card:hover .catalog-fan-image,
+.catalog-fan-card:focus-visible .catalog-fan-image {
+  transform: scale(1.1);
+}
+
+.catalog-fan-shade {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--color-navy) 10%, transparent) 0%,
+    color-mix(in oklch, var(--color-navy) 36%, transparent) 42%,
+    color-mix(in oklch, var(--color-navy) 92%, transparent) 100%
+  );
+}
+
+.catalog-fan-index {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  min-width: 2.35rem;
+  justify-content: center;
+  border: 1px solid color-mix(in oklch, var(--color-navy-foreground) 24%, transparent);
+  border-radius: var(--radius-md);
+  background-color: color-mix(in oklch, var(--color-navy) 70%, transparent);
+  padding: 0.35rem 0.5rem;
+  color: var(--color-navy-foreground);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.catalog-fan-content {
+  position: absolute;
+  inset-inline: 1rem;
+  bottom: 1rem;
+  display: block;
+}
+
 @keyframes testimonial-scroll {
   to {
     transform: translateX(calc(-50% - 0.625rem));
@@ -433,8 +587,11 @@
 
   .letter-swing-character,
   .letter-swing:hover .letter-swing-character,
+  .catalog-fan-card,
+  .catalog-fan-image,
   .testimonial-track {
     animation: none;
+    transition: none;
   }
 
   *,
@@ -443,5 +600,43 @@
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog-stage {
+    min-height: auto;
+    justify-content: flex-start;
+    margin-inline: -1.5rem;
+  }
+
+  .catalog-fan {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    padding: 1rem 1.5rem 1.35rem;
+    scroll-padding-inline: 1.5rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .catalog-fan-card,
+  .catalog-fan-card:nth-child(n),
+  .catalog-fan:hover .catalog-fan-card:nth-child(n),
+  .catalog-fan:focus-within .catalog-fan-card:nth-child(n) {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    flex: 0 0 16.25rem;
+    width: 16.25rem;
+    height: 23rem;
+    transform: none;
+    scroll-snap-align: center;
+  }
+
+  .catalog-fan-card:hover,
+  .catalog-fan-card:focus-visible {
+    transform: translateY(-0.35rem);
   }
 }

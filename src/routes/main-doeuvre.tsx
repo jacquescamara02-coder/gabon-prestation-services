@@ -19,6 +19,8 @@ export const Route = createFileRoute("/main-doeuvre")({
         content:
           "Personnel fourni avec EPI complets et sensibilisé aux normes HSE en vigueur à Port-Gentil.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: WorkforcePage,
@@ -149,7 +151,7 @@ function WorkforcePage() {
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-transform duration-200 hover:-translate-y-1"
+              className="orbit-border-button orbit-primary inline-flex items-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold uppercase tracking-wide"
             >
               Demander du personnel
               <ArrowRight className="size-4" aria-hidden="true" />

@@ -27,6 +27,8 @@ export const Route = createFileRoute("/contact")({
         content:
           "Demandez un devis express pour vos engins, travaux industriels ou mise à disposition de personnel à Port-Gentil.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ContactPage,
@@ -270,7 +272,7 @@ function ContactPage() {
               <button
                 type="submit"
                 disabled={sending}
-                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-transform duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+                className="orbit-border-button orbit-primary mt-7 inline-flex w-full items-center justify-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold uppercase tracking-wide disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
               >
                 {sending ? (
                   <>
@@ -336,7 +338,7 @@ function ContactPage() {
                   href={SITE.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 rounded-md border border-primary/40 px-5 py-3 text-sm font-semibold text-primary transition-colors duration-200 hover:bg-primary/10"
+                  className="orbit-border-button orbit-card mt-6 inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-semibold"
                 >
                   WhatsApp {SITE.whatsappDisplay}
                 </a>

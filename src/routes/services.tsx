@@ -29,6 +29,8 @@ export const Route = createFileRoute("/services")({
         content:
           "Matériel de levage, flotte de véhicules et travaux industriels pour vos chantiers urbains, maritimes et industriels au Gabon.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ServicesPage,
@@ -181,14 +183,14 @@ function ServicesPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/main-doeuvre"
-                className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-semibold transition-colors duration-200 hover:bg-secondary"
+                className="orbit-border-button orbit-card inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-semibold"
               >
                 <Truck className="size-4" aria-hidden="true" />
                 Notre main-d'œuvre
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-transform duration-200 hover:-translate-y-1"
+                className="orbit-border-button orbit-primary inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-semibold uppercase tracking-wide"
               >
                 Devis express
                 <ArrowRight className="size-4" aria-hidden="true" />

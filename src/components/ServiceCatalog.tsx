@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { LetterSwing } from "@/components/LetterSwing";
 import { Reveal } from "@/components/Reveal";
 import { SITE } from "@/lib/site";
-import enginsImage from "@/assets/engins.jpg";
+import camionsManAsset from "@/assets/psg-camions-man.jpg.asset.json";
 import equipeImage from "@/assets/equipe.jpg";
 import froidImage from "@/assets/froid.jpg";
 import heroImage from "@/assets/hero-psg.jpg";

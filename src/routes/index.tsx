@@ -25,16 +25,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "P.S.G — Engins, travaux industriels & main-d'œuvre à Port-Gentil",
+        title: "P.S.G — Prestation de Services Généraux",
       },
       {
         name: "description",
         content:
-          "P.S.G, Prestation de Services Généraux à Port-Gentil : location d'engins avec chauffeurs, soudure, peinture, froid industriel, menuiserie, espaces verts et main-d'œuvre qualifiée.",
+          "P.S.G, Prestation de Services Généraux : location d'engins avec chauffeurs, soudure, peinture, froid industriel, menuiserie, espaces verts et main-d'œuvre qualifiée au Gabon.",
       },
       {
         property: "og:title",
-        content: "P.S.G — Prestation de Services Généraux à Port-Gentil",
+        content: "P.S.G — Prestation de Services Généraux",
       },
       {
         property: "og:description",

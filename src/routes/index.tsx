@@ -149,7 +149,7 @@ function HomePage() {
             <Reveal key={s.label} delay={i * 90}>
               <p className="min-w-0 break-words font-display text-3xl font-bold leading-tight text-primary sm:text-4xl">
                 <CountUp to={s.value} />
-                <span className="text-xl font-bold sm:text-2xl lg:text-3xl">{s.suffix}</span>
+                <span className="text-lg font-bold sm:text-2xl lg:text-3xl">{s.suffix}</span>
               </p>
               <p className="mt-1 break-words text-sm text-muted-foreground">{s.label}</p>
             </Reveal>

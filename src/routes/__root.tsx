@@ -81,14 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "P.S.G — Prestation de Services Généraux à Port-Gentil" },
+      { title: "PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL à Port-Gentil" },
       {
         name: "description",
         content:
-          "P.S.G : engins lourds et légers avec opérateurs, travaux industriels et main-d'œuvre qualifiée à Port-Gentil, Gabon.",
+          "PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL : engins lourds et légers avec opérateurs, travaux industriels et main-d'œuvre qualifiée à Port-Gentil, Gabon.",
       },
-      { name: "author", content: "P.S.G" },
-      { property: "og:title", content: "P.S.G — Prestation de Services Généraux" },
+      { name: "author", content: "PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL" },
+      { property: "og:title", content: "PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL" },
       {
         property: "og:description",
         content:

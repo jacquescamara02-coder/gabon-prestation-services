@@ -11,7 +11,7 @@ export function SiteFooter() {
           <div className="inline-block rounded-lg bg-navy-foreground p-3 shadow-card">
             <img
               src={logoAsset.url}
-              alt="P.S.G — Prestation de Services Généraux"
+              alt="PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL"
               width={220}
               height={56}
               className="h-10 w-auto object-contain"
@@ -70,7 +70,7 @@ export function SiteFooter() {
           <p>
             Code ANPI : {SITE.anpi} · Immatriculation CNAMGS : {SITE.cnamgs}
           </p>
-          <p>© {new Date().getFullYear()} P.S.G — Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL — Tous droits réservés.</p>
         </div>
       </div>
     </footer>

@@ -17,13 +17,13 @@ import {
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & devis express — P.S.G Port-Gentil (B.P. 1320)" },
+      { title: "Contact & devis express — PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL" },
       {
         name: "description",
         content:
-          "Contactez P.S.G à Port-Gentil : 077 21 05 22 / 062 77 67 60, WhatsApp, formulaire de devis, plan d'accès et informations administratives (ANPI, CNAMGS).",
+          "Contactez PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL à Port-Gentil : 077 21 05 22 / 062 77 67 60, WhatsApp, formulaire de devis, plan d'accès et informations administratives (ANPI, CNAMGS).",
       },
-      { property: "og:title", content: "Contact & devis express — P.S.G Port-Gentil" },
+      { property: "og:title", content: "Contact & devis express — PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL" },
       {
         property: "og:description",
         content:
@@ -351,7 +351,7 @@ function ContactPage() {
             <Reveal delay={180}>
               <div className="overflow-hidden rounded-lg border border-border shadow-card">
                 <iframe
-                  title="Localisation de P.S.G à Port-Gentil, Gabon"
+                  title="Localisation de PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL à Port-Gentil, Gabon"
                   src="https://www.google.com/maps?q=Port-Gentil,%20Gabon&hl=fr&z=13&output=embed"
                   className="h-80 w-full border-0"
                   loading="lazy"

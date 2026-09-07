@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { LetterSwing } from "@/components/LetterSwing";
 import { Reveal } from "@/components/Reveal";
+import { SITE } from "@/lib/site";
 import enginsImage from "@/assets/engins.jpg";
 import equipeImage from "@/assets/equipe.jpg";
 import froidImage from "@/assets/froid.jpg";
@@ -54,7 +55,7 @@ export function ServiceCatalog() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">Notre Catalogue</p>
             <LetterSwing id="catalogue-title" className="mt-3 text-3xl sm:text-4xl lg:text-5xl">
-              Toutes les prestations P.S.G
+              Toutes les prestations {SITE.name}
             </LetterSwing>
             <p className="mt-5 leading-relaxed text-muted-foreground">
               Survolez les cartes pour ouvrir l'éventail de nos métiers : chaque visuel mène
@@ -64,7 +65,7 @@ export function ServiceCatalog() {
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="catalog-stage mt-12" aria-label="Catalogue des services P.S.G">
+          <div className="catalog-stage mt-12" aria-label={`Catalogue des services ${SITE.fullName}`}>
             <div className="catalog-fan">
               {catalogItems.map((item, index) => (
                 <Link

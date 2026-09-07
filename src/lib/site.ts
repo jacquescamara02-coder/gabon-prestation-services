@@ -1,6 +1,6 @@
 export const SITE = {
-  name: "P.S.G",
-  fullName: "P.S.G — Prestation de Services Généraux",
+  name: "PSG",
+  fullName: "PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL",
   city: "Port-Gentil, Gabon",
   address: "Port-Gentil, Gabon (B.P. 1320)",
   bp: "B.P. 1320",

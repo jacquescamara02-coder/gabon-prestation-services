@@ -116,8 +116,8 @@ function HomePage() {
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-navy-foreground/85 sm:text-lg">
-              Bienvenue chez P.S.G. Nous sommes votre partenaire de confiance au Gabon pour
-              tous vos besoins professionnels. Notre entreprise est spécialisée dans la mise à
+              Bienvenue chez PSG. Nous sommes votre partenaire de confiance au Gabon pour tous
+              vos besoins professionnels. Notre entreprise est spécialisée dans la mise à
               disposition d'engins lourds et légers, de véhicules et autres moyens de transport.
             </p>
           </Reveal>

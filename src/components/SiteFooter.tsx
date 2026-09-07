@@ -70,7 +70,7 @@ export function SiteFooter() {
           <p>
             Code ANPI : {SITE.anpi} · Immatriculation CNAMGS : {SITE.cnamgs}
           </p>
-          <p>© {new Date().getFullYear()} P.S.G — Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL — Tous droits réservés.</p>
         </div>
       </div>
     </footer>

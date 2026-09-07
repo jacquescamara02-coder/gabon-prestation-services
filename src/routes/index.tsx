@@ -263,7 +263,7 @@ function HomePage() {
               to="/contact"
               className="orbit-border-button orbit-primary inline-flex shrink-0 items-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold uppercase tracking-wide"
             >
-              Contacter P.S.G
+              Contacter PSG
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           </div>

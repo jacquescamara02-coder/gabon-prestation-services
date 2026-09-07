@@ -1,16 +1,22 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, ShieldCheck } from "lucide-react";
 import { NAV, SITE } from "@/lib/site";
+import logoAsset from "@/assets/psg-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
     <footer className="surface-navy mt-24">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <p className="font-display text-3xl font-bold tracking-tight">P.S.G</p>
-          <p className="mt-1 text-sm text-navy-foreground/70">
-            Prestation de Services Généraux — Port-Gentil, Gabon
-          </p>
+          <div className="inline-block rounded-lg bg-navy-foreground p-3 shadow-card">
+            <img
+              src={logoAsset.url}
+              alt="P.S.G — Prestation de Services Généraux"
+              width={220}
+              height={56}
+              className="h-10 w-auto object-contain"
+            />
+          </div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-navy-foreground/80">
             Engins, véhicules, travaux industriels et main-d'œuvre qualifiée pour les
             chantiers urbains, maritimes et industriels du Gabon.

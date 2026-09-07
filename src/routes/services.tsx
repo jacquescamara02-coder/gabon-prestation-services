@@ -340,6 +340,21 @@ function ServicesPage() {
                       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                         {t.text}
                       </p>
+                      {"gallery" in t && t.gallery ? (
+                        <div className="mt-4 grid grid-cols-3 gap-2">
+                          {t.gallery.map((g) => (
+                            <img
+                              key={g.src}
+                              src={g.src}
+                              alt={g.alt}
+                              loading="lazy"
+                              width={1280}
+                              height={1072}
+                              className="aspect-square w-full rounded-md border border-border object-cover transition-transform duration-300 ease-out hover:scale-[1.03]"
+                            />
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
                   </article>
                 </Reveal>

@@ -541,6 +541,24 @@
 }
 
 @media (max-width: 767px) {
+  .catalog-fan-card .catalog-fan-eyebrow {
+    display: none;
+  }
+
+  .catalog-fan-card .catalog-fan-title {
+    font-size: 0.68rem;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+  }
+
+  .catalog-fan-card .catalog-fan-link {
+    font-size: 0.6rem;
+  }
+
+  .catalog-fan-content {
+    padding: 0.6rem;
+  }
+
   .catalog-fan-card {
     width: clamp(6.5rem, 22vw, 9rem);
     height: clamp(11.5rem, 39vw, 16rem);

@@ -541,33 +541,37 @@
 }
 
 @media (max-width: 767px) {
+  .catalog-fan-card {
+    width: clamp(6.5rem, 22vw, 9rem);
+    height: clamp(11.5rem, 39vw, 16rem);
+  }
   .catalog-fan-card:nth-child(1) {
-    --catalog-x: -8.4rem;
+    --catalog-x: -6.2rem;
   }
   .catalog-fan-card:nth-child(2) {
-    --catalog-x: -4.6rem;
+    --catalog-x: -3.5rem;
   }
   .catalog-fan-card:nth-child(4) {
-    --catalog-x: 4.6rem;
+    --catalog-x: 3.5rem;
   }
   .catalog-fan-card:nth-child(5) {
-    --catalog-x: 8.4rem;
+    --catalog-x: 6.2rem;
   }
   .catalog-fan:hover .catalog-fan-card:nth-child(1),
   .catalog-fan:focus-within .catalog-fan-card:nth-child(1) {
-    --catalog-x: -9.4rem;
+    --catalog-x: -7rem;
   }
   .catalog-fan:hover .catalog-fan-card:nth-child(2),
   .catalog-fan:focus-within .catalog-fan-card:nth-child(2) {
-    --catalog-x: -5.2rem;
+    --catalog-x: -3.9rem;
   }
   .catalog-fan:hover .catalog-fan-card:nth-child(4),
   .catalog-fan:focus-within .catalog-fan-card:nth-child(4) {
-    --catalog-x: 5.2rem;
+    --catalog-x: 3.9rem;
   }
   .catalog-fan:hover .catalog-fan-card:nth-child(5),
   .catalog-fan:focus-within .catalog-fan-card:nth-child(5) {
-    --catalog-x: 9.4rem;
+    --catalog-x: 7rem;
   }
 }
 
@@ -656,81 +660,5 @@
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
-  }
-}
-
-@media (min-width: 1280px) {
-  .catalog-fan-card:nth-child(1) {
-    --catalog-x: -15.5rem;
-  }
-
-  .catalog-fan-card:nth-child(2) {
-    --catalog-x: -7.75rem;
-  }
-
-  .catalog-fan-card:nth-child(4) {
-    --catalog-x: 7.75rem;
-  }
-
-  .catalog-fan-card:nth-child(5) {
-    --catalog-x: 15.5rem;
-  }
-
-  .catalog-fan:hover .catalog-fan-card:nth-child(1),
-  .catalog-fan:focus-within .catalog-fan-card:nth-child(1) {
-    --catalog-x: -17rem;
-  }
-
-  .catalog-fan:hover .catalog-fan-card:nth-child(2),
-  .catalog-fan:focus-within .catalog-fan-card:nth-child(2) {
-    --catalog-x: -8.5rem;
-  }
-
-  .catalog-fan:hover .catalog-fan-card:nth-child(4),
-  .catalog-fan:focus-within .catalog-fan-card:nth-child(4) {
-    --catalog-x: 8.5rem;
-  }
-
-  .catalog-fan:hover .catalog-fan-card:nth-child(5),
-  .catalog-fan:focus-within .catalog-fan-card:nth-child(5) {
-    --catalog-x: 17rem;
-  }
-}
-
-@media (max-width: 1023px) {
-  .catalog-stage {
-    min-height: auto;
-    justify-content: flex-start;
-    margin-inline: -1.5rem;
-  }
-
-  .catalog-fan {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-    height: auto;
-    overflow-x: auto;
-    padding: 1rem 1.5rem 1.35rem;
-    scroll-padding-inline: 1.5rem;
-    scroll-snap-type: x mandatory;
-  }
-
-  .catalog-fan-card,
-  .catalog-fan-card:nth-child(n),
-  .catalog-fan:hover .catalog-fan-card:nth-child(n),
-  .catalog-fan:focus-within .catalog-fan-card:nth-child(n) {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    flex: 0 0 16.25rem;
-    width: 16.25rem;
-    height: 23rem;
-    transform: none;
-    scroll-snap-align: center;
-  }
-
-  .catalog-fan-card:hover,
-  .catalog-fan-card:focus-visible {
-    transform: translateY(-0.35rem);
   }
 }

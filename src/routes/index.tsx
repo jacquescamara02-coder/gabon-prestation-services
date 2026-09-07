@@ -17,9 +17,9 @@ import { ServiceCatalog } from "@/components/ServiceCatalog";
 import { Testimonials } from "@/components/Testimonials";
 import { SITE } from "@/lib/site";
 import heroImage from "@/assets/hero-psg.jpg";
-import enginsImage from "@/assets/engins.jpg";
-import froidImage from "@/assets/froid.jpg";
-import soudureImage from "@/assets/soudure.jpg";
+import soudureReelAsset from "@/assets/psg-soudeur-reel.jpg.asset.json";
+import enginReelAsset from "@/assets/psg-engin-reel.jpg.asset.json";
+import froidReelAsset from "@/assets/psg-froid-reel.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -54,21 +54,21 @@ const priorities = [
     title: "Mise à disposition de main-d'œuvre technique",
     subtitle: "Soudeurs & tuyauteurs",
     text: "Une sous-traitance réactive avec des profils hautement qualifiés maîtrisant la soudure industrielle, prêts à intervenir sur vos chantiers.",
-    image: soudureImage,
+    image: soudureReelAsset.url,
   },
   {
     icon: Forklift,
     title: "Location d'engins de levage",
     subtitle: "Avec chauffeurs certifiés",
     text: "Manitou, chariots élévateurs, camions et véhicules légers ou lourds. Nous fournissons la solution logistique complète : l'engin + le conducteur.",
-    image: enginsImage,
+    image: enginReelAsset.url,
   },
   {
     icon: Snowflake,
     title: "Froid & climatisation",
     subtitle: "Industrielle et tertiaire",
     text: "Maintenance express et installation complète de systèmes de climatisation pour vos bureaux, locaux techniques et bases-vies à Port-Gentil.",
-    image: froidImage,
+    image: froidReelAsset.url,
   },
 ];
 

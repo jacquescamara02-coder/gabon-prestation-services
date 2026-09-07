@@ -110,7 +110,7 @@ function HomePage() {
 
           <Reveal delay={80}>
             <LetterSwing as="h1" className="mt-6 max-w-4xl font-display text-4xl leading-[1.05] text-navy-foreground sm:text-6xl lg:text-7xl">
-              P.S.G — Prestation de Services Généraux à Port-Gentil
+              P.S.G — Prestation de Services Généraux
             </LetterSwing>
           </Reveal>
 
@@ -119,9 +119,6 @@ function HomePage() {
               Bienvenue chez P.S.G. Nous sommes votre partenaire de confiance au Gabon pour
               tous vos besoins professionnels. Notre entreprise est spécialisée dans la mise à
               disposition d'engins lourds et légers, de véhicules et autres moyens de transport.
-              Nous réalisons également tous vos travaux industriels : soudure, peinture, froid,
-              menuiserie, espaces verts, ainsi que la mise à disposition de la main-d'œuvre y
-              afférente.
             </p>
           </Reveal>
 

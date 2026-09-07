@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import { NAV, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import mark from "@/assets/psg-mark.png";
+import logoAsset from "@/assets/psg-logo.png.asset.json";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -42,16 +42,19 @@ export function SiteHeader() {
       </div>
 
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={mark} alt="" width={40} height={40} className="size-10 object-contain" />
-          <span className="leading-none">
-            <span className="block font-display text-2xl font-bold tracking-tight text-primary">
-              P.S.G
-            </span>
-            <span className="block text-[11px] font-medium tracking-wide text-muted-foreground">
-              Prestation de Services Généraux
-            </span>
-          </span>
+        <Link
+          to="/"
+          className="flex items-center gap-3"
+          onClick={() => setOpen(false)}
+          aria-label="P.S.G — Prestation de Services Généraux, retour à l'accueil"
+        >
+          <img
+            src={logoAsset.url}
+            alt="P.S.G — Prestation de Services Généraux"
+            width={220}
+            height={56}
+            className="h-9 w-auto object-contain sm:h-10"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Navigation principale">

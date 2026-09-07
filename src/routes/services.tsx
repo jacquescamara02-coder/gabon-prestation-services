@@ -26,6 +26,9 @@ import camionBenneOrangeAsset from "@/assets/psg-camion-benne-orange.jpg.asset.j
 import siteIndustrielAsset from "@/assets/psg-site-industriel.jpg.asset.json";
 import soudureReelAsset from "@/assets/psg-soudure-reel.jpg.asset.json";
 import peintureReelAsset from "@/assets/psg-peinture-reel.jpg.asset.json";
+import peintureTerrasse1Asset from "@/assets/psg-peinture-terrasse-1.jpg.asset.json";
+import peintureTerrasse2Asset from "@/assets/psg-peinture-terrasse-2.jpg.asset.json";
+import peintureTerrasse3Asset from "@/assets/psg-peinture-terrasse-3.jpg.asset.json";
 import menuiserieReelAsset from "@/assets/psg-menuiserie-reel.jpg.asset.json";
 import espacesVertsReelAsset from "@/assets/psg-espaces-verts-reel.jpg.asset.json";
 import finitionsReelAsset from "@/assets/psg-finitions-reel.jpg.asset.json";
@@ -65,11 +68,25 @@ const travaux = [
   {
     icon: Brush,
     title: "Peinture",
-    text: "Peinture de bâtiments et traitements de peinture industrielle anticorrosion, essentielle pour l'environnement marin de Port-Gentil.",
+    text: "Peinture de bâtiments, traitements anticorrosion et lasure de protection des boiseries, essentielle pour l'environnement marin de Port-Gentil.",
     image: peintureReelAsset.url,
     alt: "Peintre appliquant une peinture industrielle bleue sur la façade d'un bâtiment",
     width: 870,
     height: 971,
+    gallery: [
+      {
+        src: peintureTerrasse2Asset.url,
+        alt: "Équipe PSG appliquant une lasure de protection sur une terrasse en bois à Port-Gentil",
+      },
+      {
+        src: peintureTerrasse1Asset.url,
+        alt: "Traitement et lasurage des lames de bois d'une terrasse sur ossature",
+      },
+      {
+        src: peintureTerrasse3Asset.url,
+        alt: "Pose et protection des lambourdes en bois traité sur chantier PSG",
+      },
+    ],
   },
   {
     icon: Hammer,
@@ -323,6 +340,21 @@ function ServicesPage() {
                       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                         {t.text}
                       </p>
+                      {"gallery" in t && t.gallery ? (
+                        <div className="mt-4 grid grid-cols-3 gap-2">
+                          {t.gallery.map((g) => (
+                            <img
+                              key={g.src}
+                              src={g.src}
+                              alt={g.alt}
+                              loading="lazy"
+                              width={1280}
+                              height={1072}
+                              className="aspect-square w-full rounded-md border border-border object-cover transition-transform duration-300 ease-out hover:scale-[1.03]"
+                            />
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
                   </article>
                 </Reveal>

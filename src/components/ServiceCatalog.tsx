@@ -83,16 +83,17 @@ export function ServiceCatalog() {
                   />
                   <span className="catalog-fan-shade" aria-hidden="true" />
                   <span className="catalog-fan-content">
-                    <span className="block text-[0.65rem] font-semibold uppercase tracking-widest text-signal">
+                    <span className="catalog-fan-eyebrow block text-[0.65rem] font-semibold uppercase tracking-widest text-signal">
                       {item.eyebrow}
                     </span>
-                    <span className="mt-1 block font-display text-base font-bold uppercase leading-tight text-navy-foreground">
+                    <span className="catalog-fan-title mt-1 block font-display text-base font-bold uppercase leading-tight text-navy-foreground">
                       {item.title}
                     </span>
-                    <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-navy-foreground/85">
+                    <span className="catalog-fan-link mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-navy-foreground/85">
                       Voir
                       <ArrowUpRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </span>
+
                   </span>
                   <span className="sr-only">{item.text}</span>
                   <span className="sr-only">{`0${index + 1}`}</span>

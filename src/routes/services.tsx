@@ -13,7 +13,7 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { BackButton } from "@/components/BackButton";
 import { LetterSwing } from "@/components/LetterSwing";
-import soudureImage from "@/assets/soudure.jpg";
+
 import nettoyage1Asset from "@/assets/nettoyage-1.jpg.asset.json";
 import nettoyage2Asset from "@/assets/nettoyage-2.jpg.asset.json";
 import camionsManAsset from "@/assets/psg-camions-man.jpg.asset.json";

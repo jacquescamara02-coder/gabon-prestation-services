@@ -82,8 +82,11 @@ export function SiteHeader() {
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <Menu className="size-5" /> : <Menu className="size-5" />}
-          {open ? <X className="sr-only" /> : null}
+          {open ? (
+            <X className="size-5" aria-hidden="true" />
+          ) : (
+            <Menu className="size-5" aria-hidden="true" />
+          )}
         </button>
       </div>
 

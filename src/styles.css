@@ -47,6 +47,8 @@
   --color-signal-foreground: var(--signal-foreground);
   --color-safety: var(--safety);
   --color-safety-foreground: var(--safety-foreground);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -90,6 +92,9 @@
   /* Ambre sécurité (EPI) — usage strictement ponctuel */
   --safety: oklch(0.78 0.15 78);
   --safety-foreground: oklch(0.24 0.05 60);
+
+  --whatsapp: oklch(0.62 0.17 150);
+  --whatsapp-foreground: oklch(0.99 0.005 240);
 
   --secondary: oklch(0.955 0.012 245);
   --secondary-foreground: oklch(0.28 0.06 255);
@@ -154,6 +159,8 @@
   --signal-foreground: oklch(0.17 0.04 258);
   --safety: oklch(0.8 0.14 78);
   --safety-foreground: oklch(0.2 0.045 60);
+  --whatsapp: oklch(0.64 0.16 150);
+  --whatsapp-foreground: oklch(0.99 0.005 240);
   --secondary: oklch(0.27 0.05 256);
   --secondary-foreground: oklch(0.97 0.008 240);
   --muted: oklch(0.27 0.05 256);
@@ -238,6 +245,93 @@
   );
 }
 
+@property --orbit-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes orbit-border-spin {
+  to {
+    --orbit-angle: 360deg;
+  }
+}
+
+.orbit-border-button {
+  --orbit-fill: var(--color-primary);
+  --orbit-text: var(--color-primary-foreground);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--orbit-fill), var(--orbit-fill)) padding-box,
+    conic-gradient(
+        from var(--orbit-angle),
+        color-mix(in oklch, var(--orbit-fill) 26%, transparent) 0deg,
+        color-mix(in oklch, var(--orbit-fill) 26%, transparent) 205deg,
+        var(--color-signal) 242deg,
+        var(--color-safety) 286deg,
+        color-mix(in oklch, var(--orbit-fill) 26%, transparent) 330deg,
+        color-mix(in oklch, var(--orbit-fill) 26%, transparent) 360deg
+      )
+      border-box;
+  color: var(--orbit-text);
+  box-shadow: var(--shadow-card);
+  transform: translateZ(0);
+  transition:
+    transform 220ms var(--ease-out-soft),
+    box-shadow 220ms var(--ease-out-soft),
+    filter 220ms var(--ease-out-soft);
+  animation: orbit-border-spin 3.2s linear infinite;
+}
+
+.orbit-border-button:hover,
+.orbit-border-button:focus-visible {
+  transform: translateY(-2px) translateZ(0);
+  box-shadow: var(--shadow-lift);
+}
+
+.orbit-border-button:active {
+  transform: translateY(0) translateZ(0);
+}
+
+.orbit-border-button:disabled,
+.orbit-border-button[aria-disabled="true"] {
+  transform: none;
+  box-shadow: var(--shadow-card);
+}
+
+.orbit-primary {
+  --orbit-fill: var(--color-primary);
+  --orbit-text: var(--color-primary-foreground);
+}
+
+.orbit-hero {
+  --orbit-fill: color-mix(in oklch, var(--color-navy) 72%, transparent);
+  --orbit-text: var(--color-navy-foreground);
+}
+
+.orbit-card {
+  --orbit-fill: var(--color-card);
+  --orbit-text: var(--color-foreground);
+}
+
+.orbit-background {
+  --orbit-fill: var(--color-background);
+  --orbit-text: var(--color-foreground);
+}
+
+.orbit-secondary {
+  --orbit-fill: var(--color-secondary);
+  --orbit-text: var(--color-primary);
+}
+
+.orbit-whatsapp {
+  --orbit-fill: var(--color-whatsapp);
+  --orbit-text: var(--color-whatsapp-foreground);
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;
@@ -259,6 +353,10 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .orbit-border-button {
+    animation: none;
   }
 
   *,

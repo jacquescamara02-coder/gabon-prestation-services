@@ -68,7 +68,7 @@ export function SiteHeader() {
           ))}
           <Link
             to="/contact"
-            className="ml-2 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-card transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-0.5 hover:shadow-lift"
+            className="orbit-border-button orbit-primary ml-2 inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold"
           >
             <Phone className="size-4" aria-hidden="true" />
             Devis express
@@ -77,7 +77,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex size-10 items-center justify-center rounded-md border border-border text-foreground transition-colors duration-200 hover:bg-secondary md:hidden"
+          className="orbit-border-button orbit-background inline-flex size-10 items-center justify-center rounded-md md:hidden"
           aria-expanded={open}
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           onClick={() => setOpen((v) => !v)}

@@ -38,6 +38,8 @@ export const Route = createFileRoute("/")({
         content:
           "Engins lourds et légers avec opérateurs, travaux industriels et main-d'œuvre HSE au Gabon. Devis express.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HomePage,
@@ -124,14 +126,14 @@ function HomePage() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground shadow-lift transition-transform duration-200 hover:-translate-y-1"
+                className="orbit-border-button orbit-primary inline-flex items-center justify-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold uppercase tracking-wide"
               >
                 <Phone className="size-4" aria-hidden="true" />
                 Demander un devis express
               </Link>
               <a
                 href={SITE.phoneLinks[0]}
-                className="inline-flex items-center justify-center gap-2 rounded-md border border-navy-foreground/30 px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-navy-foreground transition-colors duration-200 hover:border-signal hover:text-signal"
+                className="orbit-border-button orbit-hero inline-flex items-center justify-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold uppercase tracking-wide"
               >
                 Appeler {SITE.phones[0]}
               </a>
@@ -191,7 +193,7 @@ function HomePage() {
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
                   <Link
                     to="/services"
-                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors duration-200 hover:text-navy"
+                    className="orbit-border-button orbit-secondary mt-5 inline-flex items-center gap-1.5 rounded-md px-4 py-2 text-sm font-semibold"
                   >
                     En savoir plus
                     <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -253,7 +255,7 @@ function HomePage() {
             </div>
             <Link
               to="/contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-transform duration-200 hover:-translate-y-1"
+              className="orbit-border-button orbit-primary inline-flex shrink-0 items-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold uppercase tracking-wide"
             >
               Contacter P.S.G
               <ArrowRight className="size-4" aria-hidden="true" />

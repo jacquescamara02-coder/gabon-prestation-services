@@ -13,7 +13,7 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { BackButton } from "@/components/BackButton";
 import { LetterSwing } from "@/components/LetterSwing";
-import soudureImage from "@/assets/soudure.jpg";
+
 import nettoyage1Asset from "@/assets/nettoyage-1.jpg.asset.json";
 import nettoyage2Asset from "@/assets/nettoyage-2.jpg.asset.json";
 import camionsManAsset from "@/assets/psg-camions-man.jpg.asset.json";
@@ -24,6 +24,11 @@ import pelleCatAsset from "@/assets/psg-pelle-cat.jpg.asset.json";
 import minibusAsset from "@/assets/psg-minibus.jpg.asset.json";
 import camionBenneOrangeAsset from "@/assets/psg-camion-benne-orange.jpg.asset.json";
 import siteIndustrielAsset from "@/assets/psg-site-industriel.jpg.asset.json";
+import soudureReelAsset from "@/assets/psg-soudure-reel.jpg.asset.json";
+import peintureReelAsset from "@/assets/psg-peinture-reel.jpg.asset.json";
+import menuiserieReelAsset from "@/assets/psg-menuiserie-reel.jpg.asset.json";
+import espacesVertsReelAsset from "@/assets/psg-espaces-verts-reel.jpg.asset.json";
+import finitionsReelAsset from "@/assets/psg-finitions-reel.jpg.asset.json";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -52,31 +57,55 @@ const travaux = [
     icon: Wrench,
     title: "Soudure",
     text: "Travaux de soudure générale, chaudronnerie et interventions de maintenance sur site.",
+    image: soudureReelAsset.url,
+    alt: "Soudeur PSG équipé d'un casque de sécurité en train de meuler une pièce métallique",
+    width: 261,
+    height: 193,
   },
   {
     icon: Brush,
     title: "Peinture",
     text: "Peinture de bâtiments et traitements de peinture industrielle anticorrosion, essentielle pour l'environnement marin de Port-Gentil.",
-  },
-  {
-    icon: Snowflake,
-    title: "Froid & plomberie",
-    text: "Installation, dépannage de climatiseurs et maintenance de réseaux de plomberie pour professionnels.",
+    image: peintureReelAsset.url,
+    alt: "Peintre appliquant une peinture industrielle bleue sur la façade d'un bâtiment",
+    width: 870,
+    height: 971,
   },
   {
     icon: Hammer,
     title: "Menuiserie",
     text: "Travaux de menuiserie bois, coffrage et aménagements sur mesure.",
+    image: menuiserieReelAsset.url,
+    alt: "Équipe PSG posant une terrasse en bois sur ossature",
+    width: 1080,
+    height: 799,
   },
   {
     icon: Leaf,
     title: "Espaces verts",
     text: "Aménagement, tonte, débroussaillage et nettoyage complet des abords de vos usines, bureaux ou bases-vies.",
+    image: espacesVertsReelAsset.url,
+    alt: "Agents PSG en débroussaillage d'un terrain à Port-Gentil",
+    width: 326,
+    height: 287,
+  },
+  {
+    icon: Snowflake,
+    title: "Froid & plomberie",
+    text: "Installation, dépannage de climatiseurs et maintenance de réseaux de plomberie pour professionnels.",
+    image: null,
+    alt: "",
+    width: 0,
+    height: 0,
   },
   {
     icon: UserCheck,
     title: "Main-d'œuvre dédiée",
     text: "Mise à disposition des équipes qualifiées correspondant à chacun de ces corps de métiers.",
+    image: null,
+    alt: "",
+    width: 0,
+    height: 0,
   },
 ];
 
@@ -255,26 +284,46 @@ function ServicesPage() {
               de second œuvre.
               </p>
               <img
-                src={soudureImage}
-                alt="Soudeur en intervention de maintenance industrielle"
+                src={finitionsReelAsset.url}
+                alt="Équipe PSG en travaux de finition et de reprise de sol dans un bâtiment à Port-Gentil"
                 loading="lazy"
-                width={1200}
-                height={800}
-                className="mt-8 rounded-lg border border-border object-cover shadow-card"
+                width={762}
+                height={1096}
+                className="mt-8 aspect-[4/5] w-full rounded-lg border border-border object-cover shadow-card"
               />
             </Reveal>
 
             <div className="grid gap-4 sm:grid-cols-2">
               {travaux.map((t, i) => (
                 <Reveal key={t.title} delay={i * 80}>
-                  <article className="h-full rounded-lg border border-border bg-card p-6 shadow-card transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lift">
-                    <span className="inline-flex size-10 items-center justify-center rounded-md bg-primary/10 text-primary">
-                      <t.icon className="size-5" aria-hidden="true" />
-                    </span>
-                    <h3 className="mt-4 text-lg">{t.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {t.text}
-                    </p>
+                  <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card shadow-card transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lift">
+                    {t.image ? (
+                      <div className="relative overflow-hidden">
+                        <img
+                          src={t.image}
+                          alt={t.alt}
+                          loading="lazy"
+                          width={t.width}
+                          height={t.height}
+                          className="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        />
+                        <span className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/55 to-transparent" aria-hidden="true" />
+                        <span className="absolute bottom-3 left-3 inline-flex size-9 items-center justify-center rounded-md bg-background/95 text-primary shadow-card">
+                          <t.icon className="size-4.5" aria-hidden="true" />
+                        </span>
+                      </div>
+                    ) : null}
+                    <div className="flex flex-1 flex-col p-6">
+                      {!t.image ? (
+                        <span className="mb-4 inline-flex size-10 items-center justify-center rounded-md bg-primary/10 text-primary">
+                          <t.icon className="size-5" aria-hidden="true" />
+                        </span>
+                      ) : null}
+                      <h3 className="text-lg">{t.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        {t.text}
+                      </p>
+                    </div>
                   </article>
                 </Reveal>
               ))}

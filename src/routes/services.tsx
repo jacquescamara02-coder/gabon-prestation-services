@@ -142,7 +142,7 @@ function ServicesPage() {
       </section>
 
       {/* GALERIE PARC D'ENGINS */}
-      <section className="bg-secondary/60 py-20" aria-labelledby="parc-title">
+      <section className="py-20" aria-labelledby="parc-title">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="mb-12 max-w-2xl">

@@ -14,7 +14,7 @@ const catalogItems = [
     eyebrow: "Transport & levage",
     title: "Engins avec opérateurs",
     text: "Location d'engins lourds, légers et véhicules avec chauffeurs qualifiés.",
-    image: enginsImage,
+    image: camionsManAsset.url,
     to: "/services",
   },
   {

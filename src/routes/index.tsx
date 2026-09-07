@@ -17,9 +17,9 @@ import { ServiceCatalog } from "@/components/ServiceCatalog";
 import { Testimonials } from "@/components/Testimonials";
 import { SITE } from "@/lib/site";
 import heroImage from "@/assets/hero-psg.jpg";
-import enginsImage from "@/assets/engins.jpg";
-import froidImage from "@/assets/froid.jpg";
-import soudureImage from "@/assets/soudure.jpg";
+import soudureReelAsset from "@/assets/psg-soudeur-reel.jpg.asset.json";
+import enginReelAsset from "@/assets/psg-engin-reel.jpg.asset.json";
+import froidReelAsset from "@/assets/psg-froid-reel.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({

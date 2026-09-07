@@ -4,6 +4,8 @@ import { BadgeCheck, Loader2, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { Reveal } from "@/components/Reveal";
+import { BackButton } from "@/components/BackButton";
+import { LetterSwing } from "@/components/LetterSwing";
 import { SITE } from "@/lib/site";
 import {
   Accordion,
@@ -136,11 +138,12 @@ function ContactPage() {
     <>
       <section className="surface-navy">
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+          <BackButton inverse />
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-widest text-signal">
               Contact, localisation & conformité
             </p>
-            <h1 className="mt-3 font-display text-4xl sm:text-5xl">Parlons de votre chantier</h1>
+            <LetterSwing as="h1" className="mt-3 font-display text-4xl sm:text-5xl">Parlons de votre chantier</LetterSwing>
             <p className="mt-5 max-w-2xl leading-relaxed text-navy-foreground/85">
               Devis express, mobilisation d'engins ou d'équipes : notre bureau de Port-Gentil
               vous répond rapidement.
@@ -158,7 +161,7 @@ function ContactPage() {
               noValidate
               className="rounded-lg border border-border bg-card p-7 shadow-card sm:p-9"
             >
-              <h2 className="text-2xl">Demander un devis express</h2>
+              <LetterSwing className="text-2xl">Demander un devis express</LetterSwing>
               <p className="mt-2 text-sm text-muted-foreground">
                 Les champs marqués d'un astérisque sont obligatoires.
               </p>
@@ -297,7 +300,7 @@ function ContactPage() {
           <div className="space-y-6">
             <Reveal delay={100}>
               <div className="rounded-lg border border-border bg-card p-7 shadow-card">
-                <h2 className="text-xl">Coordonnées</h2>
+                <LetterSwing className="text-xl">Coordonnées</LetterSwing>
                 <ul className="mt-5 space-y-4 text-sm">
                   <li className="flex gap-3">
                     <MapPin className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
@@ -365,7 +368,7 @@ function ContactPage() {
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">FAQ</p>
-            <h2 className="mt-3 text-3xl">Questions fréquentes</h2>
+            <LetterSwing className="mt-3 text-3xl">Questions fréquentes</LetterSwing>
             <div className="hairline mt-5 h-px w-40" aria-hidden="true" />
           </Reveal>
           <Reveal delay={120}>

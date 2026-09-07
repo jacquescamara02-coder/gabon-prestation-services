@@ -332,6 +332,78 @@
   --orbit-text: var(--color-whatsapp-foreground);
 }
 
+/* Letter swing — entrance character by character, then a restrained hover wave. */
+.letter-swing {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+.letter-swing-character {
+  display: inline-block;
+  transform-origin: 50% 85%;
+  animation: letter-swing-in 620ms var(--ease-out-soft) both;
+  animation-delay: calc(var(--letter-index) * 18ms);
+}
+
+.letter-swing:hover .letter-swing-character {
+  animation: letter-swing-hover 520ms var(--ease-out-soft) both;
+  animation-delay: calc(var(--letter-index) * 12ms);
+}
+
+@keyframes letter-swing-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0.6em) rotate(7deg);
+  }
+  58% {
+    opacity: 1;
+    transform: translateY(-0.08em) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes letter-swing-hover {
+  0%,
+  100% {
+    transform: none;
+  }
+  48% {
+    transform: translateY(-0.12em) rotate(-2deg);
+  }
+}
+
+.testimonial-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  padding: 0.5rem 0;
+  animation: testimonial-scroll 34s linear infinite;
+}
+
+.testimonial-marquee:hover .testimonial-track,
+.testimonial-marquee:focus-within .testimonial-track {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  width: min(23rem, calc(100vw - 3rem));
+}
+
+@keyframes testimonial-scroll {
+  to {
+    transform: translateX(calc(-50% - 0.625rem));
+  }
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;
@@ -356,6 +428,12 @@
   }
 
   .orbit-border-button {
+    animation: none;
+  }
+
+  .letter-swing-character,
+  .letter-swing:hover .letter-swing-character,
+  .testimonial-track {
     animation: none;
   }
 

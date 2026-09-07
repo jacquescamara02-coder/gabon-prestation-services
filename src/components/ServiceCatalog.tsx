@@ -4,10 +4,10 @@ import { LetterSwing } from "@/components/LetterSwing";
 import { Reveal } from "@/components/Reveal";
 import { SITE } from "@/lib/site";
 import camionsManAsset from "@/assets/psg-camions-man.jpg.asset.json";
-import equipeImage from "@/assets/equipe.jpg";
-import froidImage from "@/assets/froid.jpg";
-import heroImage from "@/assets/hero-psg.jpg";
-import soudureImage from "@/assets/soudure.jpg";
+import soudureChantierAsset from "@/assets/psg-soudure-chantier.jpg.asset.json";
+import interventionMarineAsset from "@/assets/psg-intervention-marine.jpg.asset.json";
+import equipeTrancheeAsset from "@/assets/psg-equipe-tranchee.jpg.asset.json";
+import agentCamionsAsset from "@/assets/psg-agent-camions.jpg.asset.json";
 
 const catalogItems = [
   {

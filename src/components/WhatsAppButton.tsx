@@ -7,7 +7,7 @@ export function WhatsAppButton() {
         href={SITE.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Écrire à P.S.G sur WhatsApp au ${SITE.whatsappDisplay}`}
+        aria-label={`Écrire à ${SITE.fullName} sur WhatsApp au ${SITE.whatsappDisplay}`}
         className="orbit-border-button orbit-whatsapp group inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-semibold"
       >
         <svg viewBox="0 0 24 24" className="size-6 fill-current" aria-hidden="true">

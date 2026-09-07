@@ -19,13 +19,13 @@ import soudureImage from "@/assets/soudure.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Transport, engins & travaux industriels — P.S.G Port-Gentil" },
+      { title: "Transport, engins & travaux industriels — PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL" },
       {
         name: "description",
         content:
           "Location d'engins lourds et légers avec opérateurs, soudure, peinture anticorrosion, froid et plomberie, menuiserie et espaces verts à Port-Gentil.",
       },
-      { property: "og:title", content: "Transport, engins & travaux industriels — P.S.G" },
+      { property: "og:title", content: "Transport, engins & travaux industriels — PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL" },
       {
         property: "og:description",
         content:
@@ -142,8 +142,9 @@ function ServicesPage() {
               </p>
               <LetterSwing className="mt-3 text-3xl">Tous les corps de métier, un seul prestataire</LetterSwing>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                De la chaudronnerie à l'entretien des abords, P.S.G intervient sur l'ensemble
-                de vos besoins de maintenance industrielle et de second œuvre.
+              De la chaudronnerie à l'entretien des abords, PRESTATION DES SERVICES GÉNÉRAUX
+              (PSG) SARL intervient sur l'ensemble de vos besoins de maintenance industrielle et
+              de second œuvre.
               </p>
               <img
                 src={soudureImage}

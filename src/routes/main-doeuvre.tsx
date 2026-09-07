@@ -9,13 +9,13 @@ import equipeImage from "@/assets/equipe.jpg";
 export const Route = createFileRoute("/main-doeuvre")({
   head: () => ({
     meta: [
-      { title: "Main-d'œuvre qualifiée & HSE — P.S.G Port-Gentil" },
+      { title: "Main-d'œuvre qualifiée & HSE — PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL" },
       {
         name: "description",
         content:
           "Mise à disposition de conducteurs d'engins, chauffeurs SPL, soudeurs homologués, tuyauteurs, peintres industriels, plombiers et agents de support à Port-Gentil.",
       },
-      { property: "og:title", content: "Main-d'œuvre qualifiée & HSE — P.S.G" },
+      { property: "og:title", content: "Main-d'œuvre qualifiée & HSE — PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL" },
       {
         property: "og:description",
         content:
@@ -63,8 +63,9 @@ function WorkforcePage() {
               Une main-d'œuvre qualifiée, prête à intervenir
             </LetterSwing>
             <p className="mt-5 max-w-xl leading-relaxed text-navy-foreground/85">
-              P.S.G met à votre disposition des profils opérationnels dès leur arrivée sur
-              site, encadrés et équipés selon les exigences de vos donneurs d'ordre.
+              PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL met à votre disposition des profils
+              opérationnels dès leur arrivée sur site, encadrés et équipés selon les exigences
+              de vos donneurs d'ordre.
             </p>
           </Reveal>
           <Reveal delay={120}>

@@ -46,11 +46,11 @@ export function SiteHeader() {
           to="/"
           className="flex items-center gap-3"
           onClick={() => setOpen(false)}
-          aria-label="P.S.G — Prestation de Services Généraux, retour à l'accueil"
+          aria-label="PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL, retour à l'accueil"
         >
           <img
             src={logoAsset.url}
-            alt="P.S.G — Prestation de Services Généraux"
+            alt="PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL"
             width={220}
             height={56}
             className="h-9 w-auto object-contain sm:h-10"

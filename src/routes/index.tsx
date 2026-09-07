@@ -25,16 +25,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "P.S.G — Prestation de Services Généraux",
+        title: "PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL",
       },
       {
         name: "description",
         content:
-          "P.S.G, Prestation de Services Généraux : location d'engins avec chauffeurs, soudure, peinture, froid industriel, menuiserie, espaces verts et main-d'œuvre qualifiée au Gabon.",
+          "PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL : location d'engins avec chauffeurs, soudure, peinture, froid industriel, menuiserie, espaces verts et main-d'œuvre qualifiée au Gabon.",
       },
       {
         property: "og:title",
-        content: "P.S.G — Prestation de Services Généraux",
+        content: "PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL",
       },
       {
         property: "og:description",
@@ -109,16 +109,17 @@ function HomePage() {
           </Reveal>
 
           <Reveal delay={80}>
-            <LetterSwing as="h1" className="mt-6 max-w-4xl font-display text-4xl leading-[1.05] text-navy-foreground sm:text-6xl lg:text-7xl">
-              P.S.G — Prestation de Services Généraux
+            <LetterSwing as="h1" className="mt-6 max-w-4xl font-display text-4xl leading-[1.05] text-navy-foreground sm:text-5xl lg:text-6xl">
+              PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL
             </LetterSwing>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-navy-foreground/85 sm:text-lg">
-              Bienvenue chez PSG. Nous sommes votre partenaire de confiance au Gabon pour tous
-              vos besoins professionnels. Notre entreprise est spécialisée dans la mise à
-              disposition d'engins lourds et légers, de véhicules et autres moyens de transport.
+              Bienvenue chez PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL. Nous sommes votre
+              partenaire de confiance au Gabon pour tous vos besoins professionnels. Notre
+              entreprise est spécialisée dans la mise à disposition d'engins lourds et légers, de
+              véhicules et autres moyens de transport.
             </p>
           </Reveal>
 

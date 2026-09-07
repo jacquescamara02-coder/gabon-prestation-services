@@ -24,6 +24,11 @@ import pelleCatAsset from "@/assets/psg-pelle-cat.jpg.asset.json";
 import minibusAsset from "@/assets/psg-minibus.jpg.asset.json";
 import camionBenneOrangeAsset from "@/assets/psg-camion-benne-orange.jpg.asset.json";
 import siteIndustrielAsset from "@/assets/psg-site-industriel.jpg.asset.json";
+import soudureReelAsset from "@/assets/psg-soudure-reel.jpg.asset.json";
+import peintureReelAsset from "@/assets/psg-peinture-reel.jpg.asset.json";
+import menuiserieReelAsset from "@/assets/psg-menuiserie-reel.jpg.asset.json";
+import espacesVertsReelAsset from "@/assets/psg-espaces-verts-reel.jpg.asset.json";
+import finitionsReelAsset from "@/assets/psg-finitions-reel.jpg.asset.json";
 
 export const Route = createFileRoute("/services")({
   head: () => ({

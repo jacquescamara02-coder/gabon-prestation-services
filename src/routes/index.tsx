@@ -147,10 +147,11 @@ function HomePage() {
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-10 lg:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 90}>
-              <p className="font-display text-3xl font-bold text-primary sm:text-4xl">
-                <CountUp to={s.value} suffix={s.suffix} />
+              <p className="min-w-0 break-words font-display text-3xl font-bold leading-tight text-primary sm:text-4xl">
+                <CountUp to={s.value} />
+                <span className="text-xl font-bold sm:text-2xl lg:text-3xl">{s.suffix}</span>
               </p>
-              <p className="mt-1 text-sm text-muted-foreground">{s.label}</p>
+              <p className="mt-1 break-words text-sm text-muted-foreground">{s.label}</p>
             </Reveal>
           ))}
         </div>

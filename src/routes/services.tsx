@@ -13,10 +13,17 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { BackButton } from "@/components/BackButton";
 import { LetterSwing } from "@/components/LetterSwing";
-import enginsImage from "@/assets/engins.jpg";
 import soudureImage from "@/assets/soudure.jpg";
 import nettoyage1Asset from "@/assets/nettoyage-1.jpg.asset.json";
 import nettoyage2Asset from "@/assets/nettoyage-2.jpg.asset.json";
+import camionsManAsset from "@/assets/psg-camions-man.jpg.asset.json";
+import chargeuseCamionAsset from "@/assets/psg-chargeuse-camion.jpg.asset.json";
+import camionBenneManAsset from "@/assets/psg-camion-benne-man.jpg.asset.json";
+import telehandlerAsset from "@/assets/psg-telehandler.jpg.asset.json";
+import pelleCatAsset from "@/assets/psg-pelle-cat.jpg.asset.json";
+import minibusAsset from "@/assets/psg-minibus.jpg.asset.json";
+import camionBenneOrangeAsset from "@/assets/psg-camion-benne-orange.jpg.asset.json";
+import siteIndustrielAsset from "@/assets/psg-site-industriel.jpg.asset.json";
 
 export const Route = createFileRoute("/services")({
   head: () => ({

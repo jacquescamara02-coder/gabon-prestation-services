@@ -106,12 +106,12 @@ function ServicesPage() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <img
-              src={enginsImage}
-              alt="Flotte d'engins de levage et chariots élévateurs avec leurs opérateurs"
+              src={camionsManAsset.url}
+              alt="Camions benne MAN de PRESTATION DES SERVICES GÉNÉRAUX (PSG) SARL sur un chantier à Port-Gentil"
               loading="lazy"
-              width={1200}
-              height={800}
-              className="rounded-lg border border-border object-cover shadow-card"
+              width={1080}
+              height={907}
+              className="aspect-[4/3] w-full rounded-lg border border-border object-cover shadow-card"
             />
           </Reveal>
           <Reveal delay={120}>
@@ -138,6 +138,105 @@ function ServicesPage() {
               </p>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* GALERIE PARC D'ENGINS */}
+      <section className="bg-secondary/60 py-20" aria-labelledby="parc-title">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <div className="mb-12 max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+                Notre parc matériel
+              </p>
+              <LetterSwing id="parc-title" className="mt-3 text-3xl">
+                Engins et véhicules opérationnels
+              </LetterSwing>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Images réelles de notre matériel en service au Gabon : camions benne, pelles,
+                chargeuses, télescopiques et véhicules de transport.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <Reveal className="lg:col-span-2 lg:row-span-2">
+              <figure className="group relative h-full overflow-hidden rounded-lg border border-border bg-card shadow-card">
+                <img
+                  src={chargeuseCamionAsset.url}
+                  alt="Chargeuse et camion benne Mercedes en action sur un chantier de terrassement"
+                  loading="lazy"
+                  width={1080}
+                  height={951}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5 pt-16 text-sm font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  Chargeuse et camion benne — terrassement
+                </figcaption>
+              </figure>
+            </Reveal>
+
+            {[
+              {
+                src: pelleCatAsset.url,
+                alt: "Pelle hydraulique CAT 323 sur chantier de terrassement à Port-Gentil",
+                caption: "Pelle hydraulique CAT 323",
+                width: 1080,
+                height: 607,
+              },
+              {
+                src: telehandlerAsset.url,
+                alt: "Télescopique Merlo Multi Farmer pour manutention et levage",
+                caption: "Télescopique Merlo Multi Farmer",
+                width: 1080,
+                height: 853,
+              },
+              {
+                src: camionBenneManAsset.url,
+                alt: "Camion benne MAN en service sur la route de Port-Gentil",
+                caption: "Camion benne MAN",
+                width: 1080,
+                height: 907,
+              },
+              {
+                src: camionBenneOrangeAsset.url,
+                alt: "Camion benne MAN avec opérateur sur chantier industriel",
+                caption: "Camion benne MAN avec opérateur",
+                width: 810,
+                height: 1080,
+              },
+              {
+                src: minibusAsset.url,
+                alt: "Minibus pour transport de personnel sur site",
+                caption: "Transport de personnel",
+                width: 1016,
+                height: 762,
+              },
+              {
+                src: siteIndustrielAsset.url,
+                alt: "Équipes PSG en intervention sur site industriel",
+                caption: "Intervention site industriel",
+                width: 816,
+                height: 542,
+              },
+            ].map((item, i) => (
+              <Reveal key={item.caption} delay={i * 60}>
+                <figure className="group relative h-full overflow-hidden rounded-lg border border-border bg-card shadow-card">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    width={item.width}
+                    height={item.height}
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 pt-12 text-sm font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    {item.caption}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

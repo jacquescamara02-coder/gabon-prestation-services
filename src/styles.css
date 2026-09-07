@@ -555,14 +555,10 @@
     font-size: 0.6rem;
   }
 
-  .catalog-fan-title {
-  overflow-wrap: anywhere;
-  hyphens: auto;
-}
-
-.catalog-fan-content {
+  .catalog-fan-content {
     padding: 0.6rem;
   }
+
 
   .catalog-fan-card {
     width: clamp(6.5rem, 22vw, 9rem);

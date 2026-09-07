@@ -4,10 +4,10 @@ import { LetterSwing } from "@/components/LetterSwing";
 import { Reveal } from "@/components/Reveal";
 import { SITE } from "@/lib/site";
 import camionsManAsset from "@/assets/psg-camions-man.jpg.asset.json";
-import equipeImage from "@/assets/equipe.jpg";
-import froidImage from "@/assets/froid.jpg";
-import heroImage from "@/assets/hero-psg.jpg";
-import soudureImage from "@/assets/soudure.jpg";
+import soudureChantierAsset from "@/assets/psg-soudure-chantier.jpg.asset.json";
+import interventionMarineAsset from "@/assets/psg-intervention-marine.jpg.asset.json";
+import equipeTrancheeAsset from "@/assets/psg-equipe-tranchee.jpg.asset.json";
+import agentCamionsAsset from "@/assets/psg-agent-camions.jpg.asset.json";
 
 const catalogItems = [
   {
@@ -21,28 +21,28 @@ const catalogItems = [
     eyebrow: "Travaux industriels",
     title: "Soudure & maintenance",
     text: "Interventions techniques pour sites industriels, bases-vies et chantiers.",
-    image: soudureImage,
+    image: soudureChantierAsset.url,
     to: "/services",
   },
   {
     eyebrow: "Froid industriel",
     title: "Climatisation 24h/7j",
     text: "Installation, dépannage et maintenance de systèmes de froid et climatisation.",
-    image: froidImage,
+    image: interventionMarineAsset.url,
     to: "/services",
   },
   {
     eyebrow: "Main-d'œuvre HSE",
     title: "Équipes qualifiées",
     text: "Soudeurs, tuyauteurs, techniciens, chauffeurs et agents équipés EPI.",
-    image: equipeImage,
+    image: equipeTrancheeAsset.url,
     to: "/main-doeuvre",
   },
   {
     eyebrow: "Conformité & devis",
     title: "Contact Port-Gentil",
     text: "Un interlocuteur unique pour cadrer, planifier et lancer votre demande.",
-    image: heroImage,
+    image: agentCamionsAsset.url,
     to: "/contact",
   },
 ] as const;

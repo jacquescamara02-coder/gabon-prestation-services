@@ -540,6 +540,11 @@
   transform: scale(1.12);
 }
 
+.catalog-fan-title {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
 @media (max-width: 767px) {
   .catalog-fan-card .catalog-fan-eyebrow {
     display: none;

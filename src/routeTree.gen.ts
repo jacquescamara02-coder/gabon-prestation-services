@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as MainDoeuvreRouteImport } from './routes/main-doeuvre'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -17,6 +18,11 @@ import { Route as ServicesRouteImport } from './routes/services'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -37,12 +43,14 @@ const ServicesRoute = ServicesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/main-doeuvre': typeof MainDoeuvreRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/main-doeuvre': typeof MainDoeuvreRoute
   '/services': typeof ServicesRoute
@@ -50,20 +58,23 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/main-doeuvre': typeof MainDoeuvreRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/main-doeuvre' | '/services'
+  fullPaths: '/' | '/a-propos' | '/contact' | '/main-doeuvre' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/main-doeuvre' | '/services'
-  id: '__root__' | '/' | '/contact' | '/main-doeuvre' | '/services'
+  to: '/' | '/a-propos' | '/contact' | '/main-doeuvre' | '/services'
+  id:
+    '__root__' | '/' | '/a-propos' | '/contact' | '/main-doeuvre' | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
   ContactRoute: typeof ContactRoute
   MainDoeuvreRoute: typeof MainDoeuvreRoute
   ServicesRoute: typeof ServicesRoute
@@ -76,6 +87,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -104,6 +122,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
   ContactRoute: ContactRoute,
   MainDoeuvreRoute: MainDoeuvreRoute,
   ServicesRoute: ServicesRoute,
